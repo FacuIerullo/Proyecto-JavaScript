@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://kit.fontawesome.com/7ece02fd5b.js" crossorigin="anonymous"></script>
     <title>Ecommerce</title>
 </head>
@@ -13,16 +14,22 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Ecommerce</a>
+              <a class="navbar-brand" href="index.html">Ecommerce</a>
 
+              <div class="secciones">
+                <button type="button" class="btn-todo btn btn-primary btn-sm">Todo</button>
+                <button type="button" class="btn-camisetas btn btn-primary btn-sm">Camisetas</button>
+                <button type="button" class="btn-shorts btn btn-primary btn-sm">Shorts</button>
+                <button type="button" class="btn-camperas btn btn-primary btn-sm">Camperas</button>
+              </div>
               <div class="carrito">
                 <div class="carrito-icon">
                   <i class="fa-sharp fa-solid fa-cart-shopping"></i>
                 </div>
 
-                <div class="carrito-contenedor carrito-ocultar">
-                  <div class="conteiner-carrito-info">
-                    <div class="carrito-productos">
+              <div class="carrito-contenedor carrito-ocultar">
+                <div class="container-carrito-info">
+                  <div class="carrito-productos">
                     <div class="info-producto-carrito">
                      <span class="total-item-carrito"></span>
                      <p class="nombre-item-carrito"></p>
@@ -31,40 +38,53 @@
                     <i class="fa-solid fa-xmark eliminar-item"></i>
                   </div>
                 </div>
-                  
-                  <div class="total-carrito">
-                    <strong>Total</strong>
-                    <span class="precio-total-carrito">$0</span>
-                  </div>
+                <div class="total-carrito">
+                  <strong>Total</strong>
+                  <span class="precio-total-carrito">$0</span>
+                  <button type="button" class="btn btn-primary btn-sm">Comprar</button>
+                </div>
+                <div>
+                  <form class="form-compra disable">
+                    <input type="text" class="input-compra" id="" placeholder="nombre">
+                    <input type="text" class="input-compra" id="" placeholder="provincia">
+                    <input type="text" class="input-compra" id="" placeholder="dirección">
+                    <input type="text" class="input-compra" id="" placeholder="email">
+                    <input type="text" class="input-compra" id="" placeholder="número de la tarjeta">
+                    <input type="text" class="input-compra" id="" placeholder="vencimiento de la tarjeta">
+                    <input type="text" class="input-compra" id="" placeholder="codigo de seguridad de la tarjeta">
+                    <input type="text" class="input-compra" id="" placeholder="dni">
+                  <button type="submit" class="btn-form btn btn-primary btn-sm">Comprar</button>
+                  </form>
                 </div>
               </div>
+            </div>
       </nav>
     </header>
-        <div class="container text-center productos">
+        <div class="container-productos">
           <div class="camisetas">
-            <div class="row">
-              <div class="col">
-                <img src="img/independiente1995.png" class="img-thumbnail" alt="...">
+            <div>
+              <div class="item">
+                <img src="img/independiente1995.png" alt="...">
                 <p>Camiseta Independiente 1995</p>
                 <span>$8000</span>
                 <button type="button" class="btn btn-primary btn-sm">Agregar al carrito</button>
               </div>
-              <div class="col">
-                <img src="img/argentina2022.png" class="img-thumbnail" alt="...">
-                <p>Camiseta Argentina 2022 (Tres estrellas y parche de campeón del mundo)</p>
+              <div class="item">
+                <img src="img/argentina2022.png" alt="...">
+                <p>Camiseta Argentina 2022 (3 estrellas y parche)</p>
                 <span>$10000</span>
                 <button type="button" class="btn btn-primary btn-sm">Agregar al carrito</button>
               </div>
             </div>
-            <div class="row">
-              <div class="col">
-                <img src="img/Yugoslavia1990.png" class="img-thumbnail" alt="...">
+            <div>
+              <div class="item">
+                <img src="img/Yugoslavia1990.png" alt="...">
                 <p>Camiseta Yugoslavia 1990</p>
                 <span>$8000</span>
                 <button type="button" class="btn btn-primary btn-sm">Agregar al carrito</button>
               </div>
-              <div class="col">
-                <img src="img/Barcelona2009.png" class="img-thumbnail" alt="...">
+              <div class="item">
+                <img src="img/Barcelona2009.png" alt="...">
                 <p>Camiseta Barcelona 2009</p>
                 <span>$10000</span>
                 <button type="button" class="btn btn-primary btn-sm">Agregar al carrito</button>
@@ -73,29 +93,29 @@
           </div>
 
         <div class="pantalones">
-            <div class="row">
-                <div class="col">
-                  <img src="img/shortargentina.png" class="img-thumbnail" alt="...">
+            <div>
+                <div class="item">
+                  <img src="img/shortargentina.png" alt="...">
                   <p>Short Argentina violeta</p>
                   <span>$8000</span>
                   <button type="button" class="btn btn-primary btn-sm">Agregar al carrito</button>
                 </div>
-                <div class="col">
-                  <img src="img/shortlakers.png" class="img-thumbnail" alt="...">
+                <div class="item">
+                  <img src="img/shortlakers.png" alt="...">
                   <p>Short Los Angeles Lakers</p>
                   <span>$8000</span>
                   <button type="button" class="btn btn-primary btn-sm">Agregar al carrito</button>
                 </div>
               </div>
-              <div class="row">
-                <div class="col">
-                  <img src="img/shortorlandomagic.png" class="img-thumbnail" alt="...">
+              <div>
+                <div class="item">
+                  <img src="img/shortorlandomagic.png" alt="...">
                   <p>Short Orlando Magic</p>
                   <span>$8000</span>
                   <button type="button" class="btn btn-primary btn-sm">Agregar al carrito</button>
                 </div>
-                <div class="col">
-                  <img src="img/shortraptors.png" class="img-thumbnail" alt="...">
+                <div class="item">
+                  <img src="img/shortraptors.png" alt="...">
                   <p>Short Toronto Raptors</p>
                   <span>$8000</span>
                   <button type="button" class="btn btn-primary btn-sm">Agregar al carrito</button>
@@ -104,29 +124,29 @@
             </div>
 
             <div class="camperas">
-              <div class="row">
-                <div class="col">
-                  <img src="img/camperabayern.png" class="img-thumbnail" alt="...">
+              <div>
+                <div class="item">
+                  <img src="img/camperabayern.png" alt="...">
                   <p>Campera Bayern Munich</p>
                   <span>$20000</span>
                   <button type="button" class="btn btn-primary btn-sm">Agregar al carrito</button>
                 </div>
-                <div class="col">
-                  <img src="img/camperacity.png" class="img-thumbnail" alt="...">
+                <div class="item">
+                  <img src="img/camperacity.png" alt="...">
                   <p>Campera Manchester City</p>
                   <span>$20000</span>
                   <button type="button" class="btn btn-primary btn-sm">Agregar al carrito</button>
                 </div>
               </div>
-              <div class="row">
-                <div class="col">
-                  <img src="img/camperadortmund.png" class="img-thumbnail" alt="...">
+              <div>
+                <div class="item">
+                  <img src="img/camperadortmund.png" alt="...">
                   <p>Campera Dortmund</p>
                   <span>$20000</span>
                   <button type="button" class="btn btn-primary btn-sm">Agregar al carrito</button>
                 </div>
-                <div class="col">
-                  <img src="img/camperareversible.png" class="img-thumbnail" alt="...">
+                <div class="item">
+                  <img src="img/camperareversible.png" alt="...">
                   <p>Campera Argentina reversible</p>
                   <span>$25000</span>
                   <button type="button" class="btn btn-primary btn-sm">Agregar al carrito</button>
@@ -134,7 +154,13 @@
               </div>
           </div>
         </div>
+        <div class="historial">
+          <button type="button" class="btn-historial btn btn-primary btn-sm">Historial de compras</button>
+           <p class="historial-compras disable"></p>
 
+        </div>
     <script src="javascript/js.js"></script>
-</body>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
 </html>
